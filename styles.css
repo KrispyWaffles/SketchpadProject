@@ -1,1 +1,14 @@
 
+.sketchContainer {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.boxes {
+border-color: lightblue;
+height: 100x;
+width: 100px;
+
+
+}
