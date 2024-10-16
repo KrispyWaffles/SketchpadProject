@@ -5,12 +5,9 @@ const button = document.getElementById("startButton");
 
 let userInput = document.getElementById("gridSize");
 
-
-
-
 button.addEventListener("click", function () {
   let x = userInput.value;
-  console.log(x)
+  console.log(x);
   if (x > 100) {
     document.getElementById("appInfo").textContent = "Size can't exceed 100!";
   } else {
@@ -26,17 +23,15 @@ function clearGrid() {
 
 function startSketch(x) {
   console.log(x);
-  for (let i = 0; i < x; i++) {
-      let row = document.createElement("div");
-      row.classList.add("row");
+  // Sets the container with 'x' rows and 'x' columns
+  pad.style.gridTemplateColumns = `repeat(${x}, 1fr)`;
+  pad.style.gridTemplateRows = `repeat(${x}, 1fr)`;
 
-      for (let i = 0; i < x; i++) {
-        let cell = document.createElement("div");
-        cell.classList.add("cell");
-        row.appendChild(cell);
-      }
-      pad.appendChild(row);
+  for (let i = 0; i < x; i++) {
+    for (let j = 0; j < x; j++) {
+      let cell = document.createElement("div");
+      cell.classList.add("cell");
+      pad.appendChild(cell);
     }
   }
-
-
+}
