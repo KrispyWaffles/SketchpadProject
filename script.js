@@ -1,6 +1,9 @@
 // let userInput = 0;
 let pad = document.querySelector(".sketchContainer");
 
+document.addEventListener("DOMContentLoaded", () => {
+
+
 const button = document.getElementById("startButton");
 
 let userInput = document.getElementById("gridSize");
@@ -13,6 +16,7 @@ button.addEventListener("click", function () {
   if (x > 100) {
     document.getElementById("appInfo").textContent = "Size can't exceed 100!";
   } else {
+    
     clearGrid();
     startSketch(x);
     console.log(x);
@@ -29,7 +33,8 @@ function clearGrid() {
 
 clearBtn.addEventListener("click", () => {
   clearGrid();
-})
+});
+});
 
 
 function startSketch(x) {
