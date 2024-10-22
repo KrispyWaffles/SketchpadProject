@@ -1,9 +1,11 @@
 // let userInput = 0;
-const pad = document.querySelector(".sketchContainer");
+let pad = document.querySelector(".sketchContainer");
 
 const button = document.getElementById("startButton");
 
 let userInput = document.getElementById("gridSize");
+
+// let clearBtn = document.querySelector(".clearGrid");
 
 button.addEventListener("click", function () {
   let x = userInput.value;
@@ -17,9 +19,18 @@ button.addEventListener("click", function () {
   }
 });
 
+let clearBtn = document.querySelector(".clearGrid");
+
 function clearGrid() {
-  pad.innerHTML = "";
+  while (pad.firstChild) {
+    pad.removeChild(pad.firstChild);
+  }
 }
+
+clearBtn.addEventListener("click", () => {
+  clearGrid();
+})
+
 
 function startSketch(x) {
   console.log(x);
@@ -35,3 +46,5 @@ function startSketch(x) {
     }
   }
 }
+
+
