@@ -1,6 +1,31 @@
 // let userInput = 0;
 let pad = document.querySelector(".sketchContainer");
 
+let blkBtn = document.querySelector(".blkBtn");
+let isDrawingBlack = false;
+
+
+blkBtn.addEventListener("click", () => {
+  isDrawingBlack = true;
+  console.log("black is active");
+  });
+
+
+function sketchBlk(e) {
+    if (isDrawingBlack) {
+      e.target.style.backgroundColor = "black";
+    }
+}
+
+pad.addEventListener("click", function (e) {
+  if (e.target && e.target.matches(".cell")) {
+    sketchBlk(e);
+  }
+});
+
+startSketch(e);
+ 
+
 document.addEventListener("DOMContentLoaded", () => {
 
 
@@ -50,6 +75,9 @@ function startSketch(x) {
       pad.appendChild(cell);
     }
   }
+
+
 }
+
 
 
