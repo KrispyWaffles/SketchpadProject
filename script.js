@@ -42,8 +42,9 @@ colorBtn.addEventListener("click", () => {
 function sketchColor(e) {
   if (isDrawingColor) {
     e.target.style.backgroundColor = Math.floor(Math.random()*16777215).toString(16);
-    let diffColor = "#" + randomColor;
-    e.target.style.backgroundColor = "diffColor";
+    let newColors = e.target.style.backgroundColor
+    let diffColor = "#" + newColors;
+    document.body.style.backgroundColor = diffColor;
   }
 }
 
