@@ -5,6 +5,7 @@ let blkBtn = document.querySelector(".blkBtn");
 let isDrawingBlack = false;
 
 
+console.log(blkBtn);
 blkBtn.addEventListener("click", () => {
   isDrawingBlack = true;
   console.log("black is active");
@@ -17,13 +18,15 @@ function sketchBlk(e) {
     }
 }
 
-pad.addEventListener("click", function (e) {
+pad.addEventListener("mouseover", function (e) {
+  console.log("Grid cell clicked");
+  console.log("isDrawingBlack:", isDrawingBlack);
   if (e.target && e.target.matches(".cell")) {
     sketchBlk(e);
   }
 });
 
-startSketch(e);
+
  
 
 document.addEventListener("DOMContentLoaded", () => {
