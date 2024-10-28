@@ -4,6 +4,11 @@ let pad = document.querySelector(".sketchContainer");
 let blkBtn = document.querySelector(".blkBtn");
 let isDrawingBlack = false;
 
+let colorBtn = document.querySelector(".colorBtn");
+let isDrawingColor = false;
+
+
+// actives black 
 
 console.log(blkBtn);
 blkBtn.addEventListener("click", () => {
@@ -27,6 +32,28 @@ pad.addEventListener("mouseover", function (e) {
 });
 
 
+// activate color
+
+colorBtn.addEventListener("click", () => {
+  isDrawingColor = true;
+  console.log("color is active");
+});
+
+function sketchColor(e) {
+  if (isDrawingColor) {
+    e.target.style.backgroundColor = Math.floor(Math.random()*16777215).toString(16);
+    let diffColor = "#" + randomColor;
+    e.target.style.backgroundColor = "diffColor";
+  }
+}
+
+pad.addEventListener("mouseover", function (e) {
+  console.log("Grid is selected!!");
+  console.log("isDrawingColor:", isDrawingColor);
+  if (e.target && e.target.matches(".cell")) {
+    sketchColor(e);
+  }
+});
  
 
 document.addEventListener("DOMContentLoaded", () => {
