@@ -39,14 +39,24 @@ colorBtn.addEventListener("click", () => {
   console.log("color is active");
 });
 
+
+
 function sketchColor(e) {
   if (isDrawingColor) {
-    e.target.style.backgroundColor = Math.floor(Math.random()*16777215).toString(16);
-    let newColors = e.target.style.backgroundColor
+    let newColors =  Math.floor(Math.random()*16777215).toString(16);
     let diffColor = "#" + newColors;
-    document.body.style.backgroundColor = diffColor;
+    e.target.style.backgroundColor = diffColor;
   }
 }
+
+// function sketchColor(e) {
+//   if (isDrawingColor) {
+//     e.target.style.backgroundColor = Math.floor(Math.random()*16777215).toString(16);
+//     let newColors = e.target.style.backgroundColor
+//     let diffColor = "#" + newColors;
+//     document.body.style.backgroundColor = diffColor;
+//   }
+// }
 
 pad.addEventListener("mouseover", function (e) {
   console.log("Grid is selected!!");
