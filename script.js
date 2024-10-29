@@ -28,7 +28,7 @@ pad.addEventListener("mouseover", function (e) {
   console.log("isDrawingBlack:", isDrawingBlack);
   if (e.target && e.target.matches(".cell")) {
     sketchBlk(e);
-  }
+  } 
 });
 
 
