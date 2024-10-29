@@ -8,11 +8,15 @@ let colorBtn = document.querySelector(".colorBtn");
 let isDrawingColor = false;
 
 
+
+
+
 // actives black 
 
 console.log(blkBtn);
 blkBtn.addEventListener("click", () => {
   isDrawingBlack = true;
+  isDrawingColor = false;
   console.log("black is active");
   });
 
@@ -36,6 +40,7 @@ pad.addEventListener("mouseover", function (e) {
 
 colorBtn.addEventListener("click", () => {
   isDrawingColor = true;
+  isDrawingBlack = false;
   console.log("color is active");
 });
 
