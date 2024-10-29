@@ -46,14 +46,22 @@ h1, h3 {
     
   }
 
+  .theButtons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
   .blkBtn {
-    margin-right: 50px;
+    margin: 0;
+    
     
   }
 
   .colorBtn {
-    margin-bottom: 35px;
-    margin-left: 100px;
+    margin: 0;
   }
 
   .clearGrid {
@@ -71,11 +79,6 @@ h1, h3 {
     margin-top: 20px;
 }
 
-
-/* .sketchContainer .cell {
-    border: 1px solid black;
-   
-} */
 
 
 
@@ -116,12 +119,6 @@ label {
     font-weight:bolder;
 }
 
-/* button {
-    margin: 0;
-    height: 25px;
-    width: 50px;
-    
-} */
 
 
 
